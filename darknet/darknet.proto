@@ -1,0 +1,22 @@
+syntax = "proto3";
+package darknet;
+
+message DarknetFlow {
+	int64 timestamp = 1;
+	uint64 in_bytes = 2;
+	uint64 in_pkts = 3;
+	uint32 input_port = 4;
+	uint32 ipv4_dst_addr = 5;
+	uint32 ipv4_src_addr = 6;
+	uint32 l4_dst_port = 7;
+	uint32 l4_src_port = 8;
+	uint32 output_port = 9;
+	uint32 protocol = 10;
+	uint32 tcp_flags = 11;
+	uint32 vlan_in = 12;
+	uint32 vlan_out = 13;
+}
+
+message DarknetFlows {
+  repeated DarknetFlow flow = 1;
+}
