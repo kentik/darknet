@@ -101,7 +101,7 @@ static const ProtobufCFieldDescriptor darknet__darknet_flow__field_descriptors[1
     "timestamp",
     1,
     PROTOBUF_C_LABEL_OPTIONAL,
-    PROTOBUF_C_TYPE_INT64,
+    PROTOBUF_C_TYPE_UINT64,
     offsetof(Darknet__DarknetFlow, has_timestamp),
     offsetof(Darknet__DarknetFlow, timestamp),
     NULL,

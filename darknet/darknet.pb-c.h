@@ -28,7 +28,7 @@ struct  _Darknet__DarknetFlow
 {
   ProtobufCMessage base;
   protobuf_c_boolean has_timestamp;
-  int64_t timestamp;
+  uint64_t timestamp;
   protobuf_c_boolean has_in_bytes;
   uint64_t in_bytes;
   protobuf_c_boolean has_in_pkts;
