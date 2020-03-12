@@ -95,7 +95,7 @@ void   darknet__darknet_flows__free_unpacked
   assert(message->base.descriptor == &darknet__darknet_flows__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-static const ProtobufCFieldDescriptor darknet__darknet_flow__field_descriptors[15] =
+static const ProtobufCFieldDescriptor darknet__darknet_flow__field_descriptors[16] =
 {
   {
     "timestamp",
@@ -277,8 +277,21 @@ static const ProtobufCFieldDescriptor darknet__darknet_flow__field_descriptors[1
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
+  {
+    "device_id",
+    16,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_UINT32,
+    offsetof(Darknet__DarknetFlow, has_device_id),
+    offsetof(Darknet__DarknetFlow, device_id),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
 };
 static const unsigned darknet__darknet_flow__field_indices_by_name[] = {
+  15,   /* field[15] = device_id */
   1,   /* field[1] = in_bytes */
   2,   /* field[2] = in_pkts */
   3,   /* field[3] = input_port */
@@ -298,7 +311,7 @@ static const unsigned darknet__darknet_flow__field_indices_by_name[] = {
 static const ProtobufCIntRange darknet__darknet_flow__number_ranges[1 + 1] =
 {
   { 1, 0 },
-  { 0, 15 }
+  { 0, 16 }
 };
 const ProtobufCMessageDescriptor darknet__darknet_flow__descriptor =
 {
@@ -308,7 +321,7 @@ const ProtobufCMessageDescriptor darknet__darknet_flow__descriptor =
   "Darknet__DarknetFlow",
   "darknet",
   sizeof(Darknet__DarknetFlow),
-  15,
+  16,
   darknet__darknet_flow__field_descriptors,
   darknet__darknet_flow__field_indices_by_name,
   1,  darknet__darknet_flow__number_ranges,

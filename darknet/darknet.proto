@@ -17,6 +17,7 @@ message DarknetFlow {
 	uint32 vlan_out = 13;
         uint32 sample_rate = 14;
         uint64 packet_id = 15;
+        uint32 device_id = 16;
 }
 
 message DarknetFlows {
